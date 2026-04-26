@@ -1,0 +1,57 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*' # Triggered when a tag like v3.0.1 is pushed
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        registry-url: 'https://npm.pkg.github.com'
+    
+    - name: Get version from tag
+      id: get_version
+      run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+    - name: Package Application
+      run: |
+        # Override the package.json version to match the Git tag securely
+        npm version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
+        npm run package
+    
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: dist/*
+        name: Release ${{ steps.get_version.outputs.VERSION }}
+        body: |
+          ## ZentrixStream ${{ steps.get_version.outputs.VERSION }}
+          
+          ### Installation
+          1. Download the appropriate archive below.
+          2. Extract to your web server directory.
+          3. Configure database in `anime/_config.php` and `movie/_config.php`.
+          4. Set up your TMDB API key in `movie/.env`.
+          5. Import the database schema (see README.md).
+          
+          ### ⚠️ Important
+          This software is for **educational purposes only**. 
+          See [EDUCATIONAL.md](EDUCATIONAL.md) for legal information.
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
