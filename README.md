@@ -35,7 +35,7 @@
 ### Dual Portal Architecture
 | Anime Portal | Movie Portal |
 |--------------|--------------|
-| ![Anime Portal](https://via.placeholder.com/300x200/00f3ff/000000?text=Anime+Portal) | ![Movie Portal](https://raw.githubusercontent.com/Zentrix-Dev/ZentrixStream/refs/heads/main/ZentrixMovie.jpg) |
+| ![Anime Portal](https://raw.githubusercontent.com/Zentrix-Dev/ZentrixStream/refs/heads/main/ZentrixAnime.jpg) | ![Movie Portal](https://raw.githubusercontent.com/Zentrix-Dev/ZentrixStream/refs/heads/main/ZentrixMovie.jpg) |
 | **AniList Integration** | **TMDB Integration** |
 | Neon Cyan Theme (`#00f3ff`) | Neon Red Theme (`#ff003c`) |
 | Search, Trending, Schedule | Search, Trending, Popular |
