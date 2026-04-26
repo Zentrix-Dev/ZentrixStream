@@ -19,7 +19,7 @@
     "movies",
     "php"
   ],
-  "author": "DemonZ Development",
+  "author": "DemonZ Development & ZentrixDeveloper",
   "license": "GPL-3.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
