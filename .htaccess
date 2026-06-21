@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /
+
+# 1. Visually redirect .php URLs to clean URLs
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+# 2. Silently load the .php file when the clean URL is visited
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
