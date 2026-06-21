@@ -59,6 +59,8 @@ Tailwind CSS   ━━━━━━━━━━  Styling
 JavaScript     ━━━━━━━━━━  Interactivity
 AniList API    ━━━━━━━━━━  Anime Metadata
 TMDB API       ━━━━━━━━━━  Movie/TV Metadata
+TVMAZE         ━━━━━━━━━━  Movie/TV Metadata
+TRAKT          ━━━━━━━━━━  Movie/TV Metadata
 ```
 
 ---
