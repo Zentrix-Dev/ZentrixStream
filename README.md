@@ -264,6 +264,8 @@ the Free Software Foundation, either version 3 of the License, or
 
 - [AniList](https://anilist.co) for comprehensive anime metadata
 - [The Movie Database (TMDB)](https://www.themoviedb.org) for movie/TV data
+- [The Movie (TRAKT)](https://trakt.tv/) for movie/TV data
+- [The Movie (TVMAZE)](https://api.tvmaze.com) for movie/TV data
 - [Tailwind CSS](https://tailwindcss.com) for the utility-first CSS framework
 - [Inter Font](https://rsms.me/inter/) for the beautiful typeface
 
